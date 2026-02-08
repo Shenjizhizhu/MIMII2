@@ -1,0 +1,27 @@
+[data]
+dataset = 'MIMII'
+pkl_file_path = "/home/shenji/shenji111/MIMII/data/data.pkl"
+batch_size = 65
+vocab_size = 0
+padding_size = 30
+UNK = 5
+PAD = 4
+N = 6
+P = 0.1
+[split]
+test_szie = 0.2
+random_state = 42
+[model]
+model = 'CNN_Transformer'
+input_dim = 13
+d_model = 128
+n_head = 2
+num_layers = 6
+dropout = 0.1
+num_classes = 2
+[train]
+epochs = 200
+loss = 'LabelSmoothCrossEntropyLoss'
+[optimizer]
+optim = 'Adam'
+lr = 0.0001
